@@ -57,10 +57,19 @@
             width: 300px;
             height: 200px;
         }
-		.social-media a {
-		    display: block; /* 将链接设为块级元素 */
-		    margin-bottom: 10px; /* 增加下边距以间隔两个图标 */
+		.social-media {
+		    display: flex;
+		    flex-direction: column; /* 垂直排列图标 */
+		    align-items: center;    /* 水平居中图标 */
 		}
+		
+		.social-media a {
+		    display: block;
+		    width: 200px;           /* 设置宽度 */
+		    height: 90px;          /* 设置高度 */
+		    margin-bottom: 10px;   /* 增加下边距以间隔两个图标 */
+		}
+
     </style>
 </head>
 <body>
