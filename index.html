@@ -9,7 +9,7 @@
         .social-media a {
             display: inline-block;
             width: 200px;           /* 设置宽度 */
-            height: 90px;          /* 设置高度 */
+            height: 90px;           /* 设置高度 */
             margin-bottom: 10px;   /* 增加下边距以间隔两个图标 */
         }
         .social-media img {
@@ -24,8 +24,15 @@
             <h1 class="title">欢迎来到冬冬的酒馆</h1>
         </div>
     </header>
-    <nav class="navbar is-danger">
-        <div class="navbar-menu">
+    <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item" href="#about">关于我</a>
                 <a class="navbar-item" href="#works">我的作品</a>
@@ -37,7 +44,7 @@
         <section id="about" class="section">
             <div class="container">
                 <h2 class="title">关于我</h2>
-                <p>你好，我是张末冬，一个热爱生活、喜欢分享的创作者。</p>
+                <p>你好，我是张末冬，一个傻逼。</p>
                 <div class="social-media">
                     <a class="button is-info is-light" href="https://space.bilibili.com/67929857" target="_blank">
                         <img src="images/icon1.png" alt="Bilibili">
@@ -81,8 +88,23 @@
     </main>
     <footer class="footer">
         <div class="content has-text-centered">
-            <p>&copy; 2024 一路生花 保留所有权利。</p>
+            <p>&copy; 2024 一璐生花 保留所有权利。</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
