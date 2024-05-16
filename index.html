@@ -1,122 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>冬冬的酒馆</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff4d4d;
-            color: white;
-            padding: 1rem 0;
-        }
-        nav {
-            margin: 1rem 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #ff4d4d;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        main {
-            padding: 2rem;
-            padding-bottom: 6rem; /* 为底部留出足够的空间 */
-        }
-        footer {
-            background-color: #4da6ff;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .video-container {
-            margin: 2rem 0;
-        }
-        .game {
-            margin: 2rem 0;
-        }
-        .social-media {
-            margin: 2rem 0;
+        .social-media a {
+            display: inline-block;
+            width: 200px;           /* 设置宽度 */
+            height: 90px;          /* 设置高度 */
+            margin-bottom: 10px;   /* 增加下边距以间隔两个图标 */
         }
         .social-media img {
-            width: 200px;
-            height: 90px;
-            margin: 0 10px;
+            width: 100%;           /* 使图标适应按钮大小 */
+            height: auto;          /* 保持图标比例 */
         }
-        .video-size {
-            width: 300px;
-            height: 200px;
-        }
-		.social-media {
-		    display: flex;
-		    flex-direction: column; /* 垂直排列图标 */
-		    align-items: center;    /* 水平居中图标 */
-		}
-		
-		.social-media a {
-		    display: block;
-		    width: 200px;           /* 设置宽度 */
-		    height: 90px;          /* 设置高度 */
-		    margin-bottom: 10px;   /* 增加下边距以间隔两个图标 */
-		}
-
     </style>
 </head>
 <body>
-    <header>
-        <h1>欢迎来到冬冬的酒馆</h1>
+    <header class="hero is-danger">
+        <div class="hero-body">
+            <h1 class="title">欢迎来到冬冬的酒馆</h1>
+        </div>
     </header>
-    <nav>
-        <a href="#about">关于我</a>
-        <a href="#works">我的作品</a>
-        <a href="#contact">联系我</a>
+    <nav class="navbar is-danger">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#about">关于我</a>
+                <a class="navbar-item" href="#works">我的作品</a>
+                <a class="navbar-item" href="#contact">联系我</a>
+            </div>
+        </div>
     </nav>
-    <main>
-        <section id="about">
-            <h2>关于我</h2>
-            <p>你好，我是张末冬，一个傻逼。</p>
-            <div class="social-media">
-                <a href="https://space.bilibili.com/67929857" target="_blank"><img src="images/icon1.png" alt="Bilibili"></a>
-                <a href="https://www.youtube.com/@ZhangMoDong" target="_blank"><img src="images/icon2.png" alt="YouTube"></a>
+    <main class="section">
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="title">关于我</h2>
+                <p>你好，我是张末冬，一个热爱生活、喜欢分享的创作者。</p>
+                <div class="social-media">
+                    <a class="button is-info is-light" href="https://space.bilibili.com/67929857" target="_blank">
+                        <img src="images/icon1.png" alt="Bilibili">
+                    </a>
+                    <a class="button is-info is-light" href="https://www.youtube.com/@ZhangMoDong" target="_blank">
+                        <img src="images/icon2.png" alt="YouTube">
+                    </a>
+                </div>
             </div>
         </section>
-        <section id="works">
-            <h2>我的作品</h2>
-            <p>这里是我一些作品的链接：</p>
-            <ul>
-                <li><a href="https://www.youtube.com/watch?v=07en9yytFnA" target="_blank">诡异僵王战</a></li>
-                <li><a href="https://fanqienovel.com/page/7334061217348062232" target="_blank">《界间行者》</a></li>
-            </ul>
-            <div class="video-container">
-                <h3>璐宝的梦话</h3>
-                <video controls class="video-size">
-                    <source src="梦话.mp4" type="video/mp4">
-                    您的浏览器不支持视频播放。
-                </video>
+        <section id="works" class="section">
+            <div class="container">
+                <h2 class="title">我的作品</h2>
+                <p>这里是我一些作品的链接：</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=07en9yytFnA" target="_blank">诡异僵王战</a></li>
+                    <li><a href="https://fanqienovel.com/page/7334061217348062232" target="_blank">《界间行者》</a></li>
+                </ul>
+                <div class="video-container">
+                    <h3 class="title">璐宝的梦话</h3>
+                    <video controls class="video-size">
+                        <source src="梦话.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>联系我</h2>
-            <p>如果你想了解更多信息，可以通过以下方式联系我：</p>
-            <p>Email: sob_sss@163.com</p>
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="title">联系我</h2>
+                <p>如果你想了解更多信息，可以通过以下方式联系我：</p>
+                <p>Email: sob_sss@163.com</p>
+            </div>
         </section>
-        <section class="game">
-            <h2>有趣的小游戏</h2>
-            <p>稍后我们会有一些有趣的小游戏上线，敬请期待！</p>
+        <section class="section">
+            <div class="container">
+                <h2 class="title">有趣的小游戏</h2>
+                <p>稍后我们会有一些有趣的小游戏上线，敬请期待！</p>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 一路生花 保留所有权利。</p>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 一路生花 保留所有权利。</p>
+        </div>
     </footer>
 </body>
 </html>
